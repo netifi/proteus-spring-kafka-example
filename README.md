@@ -17,10 +17,10 @@ The Proteus Spring Kafka Examples requires you have the following items installe
 
 
 ## Bugs and Feedback
-For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/proteus-spring-quickstart/issues).
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/proteus-spring-kafka-example/issues).
 
 ## License
-Copyright 2018 [Netifi Inc.](https://www.netifi.com)
+Copyright 2019 [Netifi Inc.](https://www.netifi.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
