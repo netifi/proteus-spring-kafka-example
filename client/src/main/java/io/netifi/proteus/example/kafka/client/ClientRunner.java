@@ -19,6 +19,7 @@ public class ClientRunner implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
+    // Pick a type at random stream the results
     StreamNumbersRequest.Type type = randomType();
     logger.info("Streaming numbers of type " + type.toString());
 

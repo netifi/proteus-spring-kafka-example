@@ -17,6 +17,8 @@ public class DefaultNumberService implements NumberService {
 
   @Autowired
   public DefaultNumberService(KafkaReceiver<Object, StreamNumbersResponse> kafkaReceiver) {
+    // KafkaReceiver only allows on subscriber so publish a stream with refCnt to allow multiple
+    // subscribers
     streamNumbersResponseFlux =
         kafkaReceiver
             .receiveAutoAck()
@@ -29,6 +31,7 @@ public class DefaultNumberService implements NumberService {
 
   @Override
   public Flux<StreamNumbersResponse> streamNumbers(StreamNumbersRequest message, ByteBuf metadata) {
+    // Filter message based on the type sent in
     return streamNumbersResponseFlux.filter(filter(message.getType()));
   }
 
