@@ -1,5 +1,5 @@
 # client
-A client that sends the word `World` to the included example service and prints the response from the service.
+Receives a stream of random numbers qualified by a Type supplied when asking for the stream
 
 ## Prerequisites
 The client requires that a Netifi Proteus Broker instance is running and configued with the following access key and token:

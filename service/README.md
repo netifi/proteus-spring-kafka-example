@@ -1,7 +1,5 @@
 # service
-A simple example service that receives a name and responds with the message: 
-
-    Hello, {name} from {service name}!
+Emits a stream of random numbers based on a type passed to it by a caller.
 
 ## Prerequisites
 The service requires that a Netifi Proteus Broker instance is running and configued with the following access key and token:
