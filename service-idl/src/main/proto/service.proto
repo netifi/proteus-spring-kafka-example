@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package io.netifi.proteus.example.kafka.service;
+
+option java_package = "io.netifi.proteus.example.kafka.service";
+option java_outer_classname = "ServiceProto";
+option java_multiple_files = true;
+
+service NumberService {
+
+    // A Stream of Random numbers can be filtered by type;
+    rpc streamNumbers (StreamNumbersRequest) returns (stream StreamNumbersResponse) {}
+}
+
+message StreamNumbersRequest {
+    enum Type {
+      EVEN     = 0;
+      ODD      = 1;
+      ALL      = 2;
+      NEGATIVE = 3;
+      POSITIVE = 4;
+    }
+  Type type = 1;
+}
+
+message StreamNumbersResponse {
+    int64 number = 1;
+}

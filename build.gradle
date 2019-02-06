@@ -1,0 +1,21 @@
+subprojects {
+    apply plugin: 'idea'
+
+    group 'io.netifi.proteus.quickstart'
+    version '1.5.3'
+
+    ext {
+        protobufVersion = '3.6.1'
+        proteusVersion = '1.5.5'
+        rsocketRpcVersion = '0.2.12'
+        proteusSpringVersion = '1.5.3'
+        springBootBomVersion = '2.1.1.RELEASE'
+    }
+
+    repositories {
+        jcenter()
+        maven {
+            url 'https://dl.bintray.com/netifi/netifi-oss/'
+        }
+    }
+}

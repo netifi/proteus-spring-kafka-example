@@ -1,0 +1,6 @@
+rootProject.name = 'proteus-spring-kafka-example'
+include 'client'
+include 'number-generator'
+include 'service'
+include 'service-idl'
+

@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+}
+
+mainClassName = 'io.netifi.proteus.example.kafka.service.Main'
+sourceCompatibility = 1.8
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootBomVersion}"
+    }
+}
+
+dependencies {
+    compile project(':service-idl')
+    implementation 'io.projectreactor.kafka:reactor-kafka:1.1.0.RELEASE'
+    compile "io.netifi.proteus:proteus-spring-boot-starter:$proteusSpringVersion"
+}
+
+configurations.all {
+    resolutionStrategy {
+        dependencySubstitution {
+            substitute module('com.google.guava:guava') with module('com.google.guava:guava:22.0')
+        }
+    }
+}
