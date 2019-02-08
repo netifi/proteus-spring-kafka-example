@@ -10,7 +10,7 @@
         </encoder>
     </appender>
 
-    <logger name="io.netifi.proteus.quickstart" level="info" additivity="false">
+    <logger name="io.netifi.proteus.example.kafka.service" level="info" additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
 

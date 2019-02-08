@@ -5,6 +5,7 @@ Simple project that shows how to use [reactor-kafka](https://github.com/reactor/
 This repo contains the following projects:
 
 * [client](client) - Client asks for a stream of numbers
+* [client-js](client-js) - Web Browser client that request streams of numbers
 * [service](service) - Service that reads a stream of numbers for kafka
 * [service-idl](service-idl) - Definition of the API served by the service
 * [number-generator](service-idl) - Application sends random numbers to kafka
@@ -15,6 +16,14 @@ The Proteus Spring Kafka Examples requires you have the following items installe
 * [Docker](https://docs.docker.com/install/)
 * [Kafka](https://kafka.apache.org/)
 
+## Proteus Broker Startup
+ docker run -p 8001:8001 -p 7001:7001 -p 9000:9000 -p 8101:8101  \
+ -e BROKER_SERVER_OPTS="'-Dnetifi.authentication.0.accessKey=9007199254740991'  \
+'-Dnetifi.broker.console.enabled=true' \
+'-Dnetifi.broker.ssl.disabled=true' \
+'-Dnetifi.authentication.0.accessToken=kTBDVtfRBO4tHOnZzSyY5ym2kfY=' \
+'-Dnetifi.broker.admin.accessKey=9007199254740991' \
+'-Dnetifi.broker.admin.accessToken=kTBDVtfRBO4tHOnZzSyY5ym2kfY='" netifi/proteus:1.5.3
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/netifi/proteus-spring-kafka-example/issues).
